@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { AiFillHome, AiOutlineMail } from "react-icons/ai";
+import Link from "next/link";
 import {
 	BsPlayFill,
 	BsReverseLayoutTextSidebarReverse,
@@ -10,6 +11,7 @@ import {
 type IconProps = {
 	icon: ReactElement;
 	text: String;
+	link: string;
 };
 type ControlProps = {
 	size: string;
@@ -19,10 +21,19 @@ const SideBar = () => {
 	const size = "30";
 	return (
 		<div className='fixed text-white shadow-lg top-0 left-0 pt-4 h-full w-16 flex flex-col bg-gray-800'>
-			<SideBarIcon icon={<AiFillHome size={size} />} text='Home' />
-			<SideBarIcon icon={<BsPlayFill size={size} />} text='Projects' />
-			<SideBarIcon icon={<AiOutlineMail size={size} />} text='Contact Me' />
+			<SideBarIcon link='/' icon={<AiFillHome size={size} />} text='Home' />
 			<SideBarIcon
+				link='/hello'
+				icon={<BsPlayFill size={size} />}
+				text='Projects'
+			/>
+			<SideBarIcon
+				link='/hello'
+				icon={<AiOutlineMail size={size} />}
+				text='Contact Me'
+			/>
+			<SideBarIcon
+				link='/hello'
 				icon={<BsReverseLayoutTextSidebarReverse size={size} />}
 				text='Blog'
 			/>
@@ -33,12 +44,12 @@ const SideBar = () => {
 
 const SideBarIcon = (props: IconProps) => {
 	return (
-		<div className='sidebar-icon group'>
+		<Link href={props.link} className='sidebar-icon group'>
 			{props.icon}
 			<span className='sidebar-tooltip group-hover:scale-100'>
 				{props.text}
 			</span>
-		</div>
+		</Link>
 	);
 };
 
@@ -46,10 +57,15 @@ const ControlPanel = (props: ControlProps) => {
 	return (
 		<div className='absolute bottom-0 w-full h-fit py-2 rounded-t-xl bg-gray-700'>
 			<SideBarIcon
+				link='/hello'
 				icon={<BsFillPersonFill size={props.size} />}
 				text='Profile'
 			/>
-			<SideBarIcon icon={<BsGearFill size={props.size} />} text='Settings' />
+			<SideBarIcon
+				link='/hello'
+				icon={<BsGearFill size={props.size} />}
+				text='Settings'
+			/>
 		</div>
 	);
 };
