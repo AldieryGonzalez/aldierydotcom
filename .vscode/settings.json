@@ -1,0 +1,7 @@
+{
+  "typescript.tsdk": ".\\node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "reactSnippets.settings.prettierEnabled": true,
+  "prettier.bracketSpacing": true,
+  "prettier.useTabs": true
+}
