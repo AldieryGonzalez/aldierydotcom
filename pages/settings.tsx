@@ -1,22 +1,26 @@
 import type { ReactElement } from "react";
 import { NextPageWithLayout } from "./_app";
 import Layout from "../components/Layout";
+import Head from "next/head";
 
 export async function getStaticProps() {
 	return {
 		props: {
-			title: "Hello",
+			title: "Settings",
 		},
 	};
 }
 
-const Home: NextPageWithLayout = () => {
-	return <div>Hello Hello Hello!</div>;
+//
+// MAIN BODY
+//
+const Settings: NextPageWithLayout = () => {
+	return <div>HelloWorld</div>;
 };
 
-Home.getLayout = function getLayout(page: ReactElement) {
+Settings.getLayout = function getLayout(page: ReactElement) {
 	console.log(page);
 	return <Layout title={page.props.title}>{page}</Layout>;
 };
 
-export default Home;
+export default Settings;
