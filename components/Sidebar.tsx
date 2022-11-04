@@ -18,7 +18,7 @@ type ControlProps = {
 const SideBar = () => {
 	const size = "30";
 	return (
-		<div className='fixed text-white shadow-lg top-0 left-0 pt-4 h-screen w-16 flex flex-col bg-gray-800'>
+		<div className='fixed text-white shadow-lg top-0 left-0 pt-4 h-full w-16 flex flex-col bg-gray-800'>
 			<SideBarIcon icon={<AiFillHome size={size} />} text='Home' />
 			<SideBarIcon icon={<BsPlayFill size={size} />} text='Projects' />
 			<SideBarIcon icon={<AiOutlineMail size={size} />} text='Contact Me' />
