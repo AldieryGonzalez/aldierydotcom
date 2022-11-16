@@ -14,17 +14,17 @@ type IconProps = {
 	link: string;
 };
 type ControlProps = {
-	size: string;
+	size: number;
 };
 
 const SideBar = () => {
-	const size = "30";
+	const size = 30;
 	return (
-		<div className='fixed text-white shadow-lg top-0 left-0 pt-4 h-full w-16 flex flex-col bg-gray-800'>
+		<div className='fixed text-white shadow-lg top-0 left-0  h-full w-16 flex flex-col bg-layoutPrimary'>
 			<SideBarIcon link='/' icon={<AiFillHome size={size} />} text='Home' />
 			<SideBarIcon
 				link='/projects'
-				icon={<BsPlayFill size={size} />}
+				icon={<BsPlayFill size={size + 4} />}
 				text='Projects'
 			/>
 			<SideBarIcon
@@ -34,7 +34,7 @@ const SideBar = () => {
 			/>
 			<SideBarIcon
 				link='/blog'
-				icon={<BsReverseLayoutTextSidebarReverse size={size} />}
+				icon={<BsReverseLayoutTextSidebarReverse size={size - 5} />}
 				text='Blog'
 			/>
 			<ControlPanel size={size} />
@@ -55,7 +55,7 @@ const SideBarIcon = (props: IconProps) => {
 
 const ControlPanel = (props: ControlProps) => {
 	return (
-		<div className='absolute bottom-0 w-full h-fit py-2 rounded-t-xl bg-gray-700'>
+		<div className='absolute bottom-0 w-full h-fit py-2 rounded-t-xl bg-layoutAccent'>
 			<SideBarIcon
 				link='/profile'
 				icon={<BsFillPersonFill size={props.size} />}
