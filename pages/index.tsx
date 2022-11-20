@@ -21,7 +21,6 @@ const Home: NextPageWithLayout = () => {
 };
 
 Home.getLayout = function getLayout(page: ReactElement) {
-	console.log(page);
 	return <Layout title={page.props.title}>{page}</Layout>;
 };
 

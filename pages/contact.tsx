@@ -19,7 +19,6 @@ const Contact: NextPageWithLayout = () => {
 };
 
 Contact.getLayout = function getLayout(page: ReactElement) {
-	console.log(page);
 	return <Layout title={page.props.title}>{page}</Layout>;
 };
 

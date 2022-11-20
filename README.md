@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+[Dark Color Palette](https://huemint.com/brand-3/#palette=151116-18ae2c-878b8c-575854)
+[Light Color Palette]https://huemint.com/brand-3/#palette=fdfcff-2c353b-ae4e9d-40b5bd)
+
 ## Getting Started
 
 First, run the development server:
