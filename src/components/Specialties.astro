@@ -1,0 +1,31 @@
+---
+import SpecialtyCard from "./SpecialtyCard.astro";
+const skills = {
+    'Full Stack Development': 5, 
+    'HTML and CSS': 5, 
+    "TypeScript/JavaScript": 5, 
+    "Tailwind": 1,
+    "React": 5,
+    "Astro": 5,
+    "Next.js": 3,
+    "AWS":4,
+    "Azure Cloud": 1,
+    "Python": 4,
+    "Java": 4,
+    }
+---
+
+<section class="p-3">
+    <h2 class="text-lg font-semibold">
+        Specialty Skills
+    </h2>
+    <ul class="flex flex-wrap gap-x-10 gap-y-6 p-2 border-4 rounded-xl border-slate-50/10">
+        {Object.entries(skills).map((skill) => {
+            return (
+                <SpecialtyCard>
+                    {skill[0]}
+                </SpecialtyCard>
+            )
+        })}
+    </ul>
+</section>

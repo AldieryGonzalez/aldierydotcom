@@ -1,24 +1,28 @@
 ---
 // Component Imports
-import Button from '../components/Button.astro';
+import Button from "../components/Button.astro";
+import Navbar from "../components/Navbar.astro";
+import About from "../components/About.astro";
+import Specialties from "../components/Specialties.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
+<html lang='en'>
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='generator' content={Astro.generator} />
 		<title>Astro + TailwindCSS</title>
 	</head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
+	<body class='w-full bg-slate-900 text-white'>
+		<Navbar />
+		<div class='flex flex-col gap-4 container mx-auto my-8'>
+			<About />
+			<Specialties />
 		</div>
 	</body>
 </html>
