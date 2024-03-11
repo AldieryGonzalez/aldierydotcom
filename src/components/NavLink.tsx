@@ -10,7 +10,6 @@ const NavLink = ({
   link: string;
   children: React.ReactNode;
 }) => {
-  console.log("cirpage", curPage, "link", link);
   return (
     <a
       href={link}
