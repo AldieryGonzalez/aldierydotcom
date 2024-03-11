@@ -3,7 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
-<nav class='flex items-center justify-between p-4 bg-gray-800 text-white'>
+<nav class='flex items-center z-30 justify-between p-4 absolute top-0 left-0 right-0 bg-gray-800/60 text-white'>
 	<div>
 		<span class='text-lg font-semibold'>Aldiery Gonzalez</span>
 	</div>
@@ -16,8 +16,8 @@ const currentPath = pathname.slice(1); // remove the first "/"
 		<a href='#' class='px-2 py-1 rounded hover:bg-gray-700'>
 			Projects</a
 		>
-		<a href='/resume' class='px-2 py-1 rounded hover:bg-gray-700'>
-			Resume
+		<a href='/about' class='px-2 py-1 rounded hover:bg-gray-700'>
+			Going forward
 		</a>
 	</div>		
 	<div class='sm:flex gap-4 hidden'>
