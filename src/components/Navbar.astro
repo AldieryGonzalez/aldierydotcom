@@ -11,9 +11,9 @@ const pathname = new URL(Astro.request.url).pathname;
 		<NavLink link='/' curPage={pathname} client:load>
 			Home
 		</NavLink>
-		<!-- <NavLink link='/projects' curPage={pathname} client:load>
+		<NavLink link='/projects' curPage={pathname} client:load>
 			Projects
-		</NavLink> -->
+		</NavLink>
 		<NavLink link='/about' curPage={pathname} client:load>
 			Looking Forward
 		</NavLink>
