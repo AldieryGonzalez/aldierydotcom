@@ -1,6 +1,6 @@
 ---
+import NavLink from './NavLink';
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <nav class='flex items-center h-16 z-30 justify-between p-4 absolute top-0 left-0 right-0 bg-gray-800/60 text-white'>
@@ -8,17 +8,15 @@ const currentPath = pathname.slice(1); // remove the first "/"
 		<span class='text-lg font-semibold'>Aldiery Gonzalez</span>
 	</div>
 	<div class='flex justify-center space-x-4 rounded-full py-1 px-2'>
-		<a
-			href='/'
-			class='px-2 py-1 rounded-full hover:bg-gray-700 shadow-lg bg-slate-600'>
+		<NavLink link='/' curPage={pathname} client:load>
 			Home
-		</a>
-		<a href='#' class='px-2 py-1 rounded hover:bg-gray-700'>
-			Projects</a
-		>
-		<a href='/about' class='px-2 py-1 rounded hover:bg-gray-700'>
-			Going forward
-		</a>
+		</NavLink>
+		<NavLink link='/projects' curPage={pathname} client:load>
+			Projects
+		</NavLink>
+		<NavLink link='/about' curPage={pathname} client:load>
+			Looking Forward
+		</NavLink>
 	</div>		
 	<div class='sm:flex gap-4 hidden'>
 		<a href='#' class='text-xl'>
