@@ -1,25 +1,25 @@
 ---
-// Component Imports
-import Button from "../components/Button.astro";
-import About from "../components/About.astro";
-import Specialties from "../components/Specialties.astro";
-import SiteLayout from "../layouts/SiteLayout.astro";
-import { Boxes } from "../components/ui/background-boxes";
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+import About from '../components/About.astro';
+import Specialties from '../components/Specialties.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { Boxes } from '../components/ui/background-boxes';
 ---
 
 <SiteLayout>
-  <div class="h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
-      <div class="absolute inset-0 w-full h-full bg-slate-900 flex flex-col z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-      <h1 class="md:text-4xl text-xl text-white relative z-20 flex flex-col gap-3">
-        <span class="block text-center">Hello, my name is</span>
-        <span class="block text-4xl md:text-6xl text-center font-bold">Aldi</span>
-        <span class="block text-center text-lg font-bold text-white/50">Aldiery Gonzalez</span>
-      </h1>
-      <About />
-      <Specialties />
-      <Boxes client:load />
-    </div>
+	<div
+		class='relative flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-slate-900'>
+		<h1
+			class='relative z-20 flex flex-col gap-3 text-xl text-white md:text-4xl'>
+			<span class='block text-center'>Hello, my name is</span>
+			<span class='block text-center text-4xl font-bold md:text-6xl'
+				>Aldi</span
+			>
+			<span class='block text-center text-lg font-bold text-white/50'
+				>Aldiery Gonzalez</span
+			>
+		</h1>
+		<About />
+		<!-- <Specialties /> -->
+		<Boxes client:load />
+	</div>
 </SiteLayout>
