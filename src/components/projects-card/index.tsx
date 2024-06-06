@@ -19,13 +19,14 @@ const ProjectCard = ({
 	...props
 }: ProjectCardProps) => {
 	return (
-		<div className='group relative z-10 overflow-hidden rounded-lg border border-foreground/25 shadow-lg backdrop-blur-2xl'>
-			<Link className='absolute inset-0 z-10' href={link}>
-				<span className='sr-only'>View Project</span>
-			</Link>
+		<Link
+			href={link}
+			className='relative z-10 overflow-hidden rounded-lg border border-foreground/25 shadow-lg backdrop-blur-2xl transition-transform duration-300 hover:scale-[1.02] focus:scale-[1.02]'>
+			<span className='sr-only'>View Project</span>
+
 			<Image
 				alt={title}
-				className='h-60 w-full object-cover transition-transform duration-300 group-hover:scale-105'
+				className='h-60 w-full object-cover '
 				height='300'
 				src={img}
 				style={{
@@ -40,7 +41,7 @@ const ProjectCard = ({
 					{children}
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
