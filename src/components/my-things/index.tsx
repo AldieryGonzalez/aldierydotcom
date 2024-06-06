@@ -18,7 +18,7 @@ const MyThings = ({ ...props }: MyThingsProps) => {
 			</ThingCard>
 			<ThingCard title='Developer'>
 				I am a web and app developer and I love to code, but more than
-				anything I like to solve problems. I currently best in the
+				anything I like to solve problems. I currently work best in the
 				React/NextJs ecosystem, but am versed in many other languages
 				and frameworks as well.
 			</ThingCard>
