@@ -58,7 +58,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 	};
 	return (
 		<ThemeContext.Provider value={value}>
-			<div className='dark'>{children}</div>
+			<div>{children}</div>
 		</ThemeContext.Provider>
 	);
 }
