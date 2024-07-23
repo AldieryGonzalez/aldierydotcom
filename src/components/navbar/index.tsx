@@ -41,7 +41,7 @@ const Navbar = () => {
 						<SiLinkedin />
 					</Link>
 				</nav>
-				<ThemeSwitch />
+				{/* <ThemeSwitch /> */}
 			</div>
 			<Dropdown icon={<Menu />} className='sm:hidden'>
 				<div className='flex w-full flex-col'>
