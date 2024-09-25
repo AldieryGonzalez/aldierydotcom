@@ -7,7 +7,7 @@ import ThemeSwitchButton from './atoms/switch-button';
 
 export default function ThemeSwitch() {
 	const [mounted, setMounted] = useState(false);
-	const { setTheme, theme } = useTheme();
+	const { setTheme, resolvedTheme: theme } = useTheme();
 
 	useEffect(() => setMounted(true), []);
 
