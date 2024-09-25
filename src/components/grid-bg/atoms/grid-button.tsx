@@ -1,10 +1,10 @@
-import { useTheme } from '@/hooks/useTheme';
 import {
 	motion,
 	MotionValue,
 	useMotionTemplate,
 	useTransform,
 } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 type GridButtonProps = {
 	width: number;

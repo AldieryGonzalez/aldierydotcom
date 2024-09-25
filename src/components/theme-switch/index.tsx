@@ -1,7 +1,7 @@
 'use client';
 
-import { useTheme } from '@/hooks/useTheme';
 import { Moon, Sun, SunMoon } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import ThemeSwitchButton from './atoms/switch-button';
 

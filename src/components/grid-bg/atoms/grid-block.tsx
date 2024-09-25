@@ -1,5 +1,5 @@
-import { useTheme } from '@/hooks/useTheme';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 type GridBlockProps = {
 	width: number;

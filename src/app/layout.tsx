@@ -1,6 +1,6 @@
 import Navbar from '@/components/navbar';
-import { Providers } from '@/providers';
 import type { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
 import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
 
@@ -23,14 +23,14 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<Providers>
+				<ThemeProvider attribute='class'>
 					<div className='flex min-h-svh flex-col bg-background text-foreground'>
 						<Navbar />
 						<main className='relative flex min-h-full grow text-foreground'>
 							{children}
 						</main>
 					</div>
-				</Providers>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
