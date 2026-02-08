@@ -1,0 +1,25 @@
+---
+import ContactForm from '@/components/contact-form';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title='Contact - Aldiery'>
+	<section class='page-shell'>
+		<div class='grid gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
+			<div class='brutal-panel p-6 md:p-8'>
+				<p class='mb-3 text-xs font-semibold uppercase tracking-[0.2em]'>Get In Touch</p>
+				<h1 class='text-4xl sm:text-6xl'>Contact</h1>
+				<p class='mt-5 max-w-md border-l-4 border-[var(--line)] pl-3 text-sm'>
+					Tell me what you are building, what is blocked, and what “done” should look like.
+				</p>
+				<div class='mt-8 grid gap-3 text-sm font-semibold uppercase sm:grid-cols-2'>
+					<div class='border-[3px] border-[var(--line)] bg-[var(--accent-2)] px-3 py-2 text-black'>response speed: fast</div>
+					<div class='border-[3px] border-[var(--line)] bg-[var(--accent-3)] px-3 py-2 text-black'>timezone: central</div>
+				</div>
+			</div>
+			<div class='brutal-panel p-6'>
+				<ContactForm client:load />
+			</div>
+		</div>
+	</section>
+</BaseLayout>

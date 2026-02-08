@@ -1,17 +1,22 @@
-'use client';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
-type NavLinkProps = React.ComponentProps<typeof Link>;
+type NavLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+	href: string;
+	pathname?: string;
+};
 
-const NavLink = ({ href, className, ...props }: NavLinkProps) => {
-	const path = usePathname();
-	const active = path === href || path === props.as;
+const NavLink = ({ href, className, pathname, ...props }: NavLinkProps) => {
+	const active = pathname === href;
 	return (
-		<Link href={href} className={cn(className, active ? 'underline' : '')}>
+		<a
+			href={href}
+			className={cn(
+				'brutal-button px-3 py-2 text-xs text-black',
+				active ? 'bg-[var(--accent)]' : 'bg-[var(--panel)]',
+				className,
+			)}>
 			{props.children}
-		</Link>
+		</a>
 	);
 };
 

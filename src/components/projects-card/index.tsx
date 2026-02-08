@@ -1,47 +1,37 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
 type ProjectCardProps = {
 	img: string;
-	gif?: string;
 	title: string;
 	link: string;
 	children: React.ReactNode;
 };
 
-const ProjectCard = ({
-	img,
-	gif,
-	title,
-	link,
-	children,
-	...props
-}: ProjectCardProps) => {
+const ProjectCard = ({ img, title, link, children }: ProjectCardProps) => {
 	return (
-		<Link
+		<a
 			href={link}
-			className='relative z-10 overflow-hidden rounded-lg border border-foreground/25 shadow-lg backdrop-blur-2xl transition-transform duration-300 hover:scale-[1.02] focus:scale-[1.02]'>
-			<span className='sr-only'>View Project</span>
-
-			<Image
-				alt={title}
-				className='h-60 w-full object-cover '
-				height='300'
-				src={img}
-				style={{
-					aspectRatio: '400/300',
-					objectFit: 'cover',
-				}}
-				width='400'
-			/>
-			<div className='h-full bg-white/50 p-4 dark:bg-foreground/5'>
-				<h3 className='text-lg font-semibold md:text-xl'>{title}</h3>
-				<div className='line-clamp-4 text-sm text-gray-500 dark:text-gray-400'>
-					{children}
+			rel='noreferrer'
+			target='_blank'
+			className='brutal-panel group relative flex flex-col overflow-hidden transition-transform duration-150 hover:-translate-x-1 hover:-translate-y-1'>
+			<span className='sr-only'>View project</span>
+			<div className='relative border-b-4 border-[var(--line)]'>
+				<img
+					alt={title}
+					className='h-52 w-full object-cover saturate-[1.1] transition duration-300 group-hover:grayscale-[0.15]'
+					height={300}
+					src={img}
+					width={400}
+				/>
+				<div className='absolute left-3 top-3 border-[3px] border-[var(--line)] bg-[var(--accent)] px-2 py-1 text-xs font-bold uppercase tracking-[0.12em] text-black'>
+					Live
 				</div>
 			</div>
-		</Link>
+			<div className='flex grow flex-col gap-3 p-4'>
+				<h3 className='text-2xl'>{title}</h3>
+				<p className='text-sm leading-relaxed text-[var(--muted-ink)]'>{children}</p>
+			</div>
+		</a>
 	);
 };
 

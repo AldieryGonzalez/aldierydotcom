@@ -1,0 +1,17 @@
+---
+import HeroPlayground from '@/components/hero-playground';
+import MyThings from '@/components/my-things';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<section class='page-shell flex flex-col gap-8'>
+		<div class='brutal-panel px-4 py-3 md:px-6'>
+			<p class='text-sm font-semibold uppercase tracking-[0.15em]'>Aldiery Gonzalez / Portfolio</p>
+		</div>
+
+		<HeroPlayground client:load />
+
+		<MyThings />
+	</section>
+</BaseLayout>

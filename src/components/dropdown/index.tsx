@@ -9,16 +9,19 @@ type DropdownProps = {
 	className?: string;
 };
 
-const Dropdown = ({ children, icon, className, ...props }: DropdownProps) => {
+const Dropdown = ({ children, icon, className }: DropdownProps) => {
 	const [open, setOpen] = useState(false);
-	const handleOpen = () => {
-		setOpen((open) => !open);
-	};
 	return (
 		<div className={cn('relative', className)}>
-			<button onClick={handleOpen}>{icon}</button>
+			<button
+				onClick={() => setOpen((value) => !value)}
+				className='brutal-button grid h-10 w-10 place-items-center bg-[var(--accent-2)] p-0 text-black'
+				aria-expanded={open}
+				aria-label='Toggle navigation menu'>
+				{icon}
+			</button>
 			{open && (
-				<div className='absolute right-0 top-full flex min-w-28 items-center justify-between rounded-md border bg-background p-3'>
+				<div className='brutal-panel absolute right-0 top-[calc(100%+0.5rem)] min-w-40 p-3'>
 					{children}
 				</div>
 			)}

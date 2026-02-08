@@ -1,4 +1,5 @@
-import { motion, MotionValue } from 'framer-motion';
+import { motion } from 'framer-motion';
+import type { MotionValue } from 'framer-motion';
 import GridBlock from '../atoms/grid-block';
 import GridButton from '../atoms/grid-button';
 
@@ -11,6 +12,7 @@ type GridRowProps = {
 	coordinatesArray: string[];
 	message: string;
 	selected: number[];
+	won: boolean;
 	setSelected: React.Dispatch<React.SetStateAction<number[]>>;
 };
 function GridRow({
@@ -22,6 +24,7 @@ function GridRow({
 	message,
 	hue,
 	selected,
+	won,
 	setSelected,
 }: GridRowProps) {
 	return (
@@ -39,6 +42,7 @@ function GridRow({
 							height={blockHeight}
 							message={message}
 							selected={selected}
+							won={won}
 							setSelected={setSelected}
 						/>
 					);

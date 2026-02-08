@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * Returns current size of a parent element of the provided node.
@@ -14,7 +14,7 @@ export function useParentSize(
 	ancestor = 1,
 ) {
 	const [size, setSize] = useState([0, 0]);
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!node.current) return;
 		let parent = node.current;
 		for (let i = 0; i < ancestor; i++) {
