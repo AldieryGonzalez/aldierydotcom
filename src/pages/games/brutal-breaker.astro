@@ -1,0 +1,10 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import StandaloneGame from '@/components/games/standalone-game';
+---
+
+<BaseLayout title='Brutal Breaker - Games - Aldiery'>
+	<section class='page-shell'>
+		<StandaloneGame client:load gameId='brutal-breaker' />
+	</section>
+</BaseLayout>

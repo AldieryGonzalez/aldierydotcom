@@ -1,0 +1,10 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import StandaloneGame from '@/components/games/standalone-game';
+---
+
+<BaseLayout title='Snake - Games - Aldiery'>
+	<section class='page-shell'>
+		<StandaloneGame client:load gameId='snake' />
+	</section>
+</BaseLayout>
