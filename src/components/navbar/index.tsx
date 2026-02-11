@@ -26,6 +26,9 @@ const Navbar = ({ pathname }: NavbarProps) => {
 						<NavLink href='/contact' pathname={pathname}>
 							Contact
 						</NavLink>
+						<NavLink href='/games' pathname={pathname}>
+							Games
+						</NavLink>
 					</nav>
 					<nav className='ml-3 flex items-center gap-2' aria-labelledby='external-navigation'>
 						<a
@@ -58,6 +61,9 @@ const Navbar = ({ pathname }: NavbarProps) => {
 							</NavLink>
 							<NavLink href='/contact' pathname={pathname}>
 								Contact
+							</NavLink>
+							<NavLink href='/games' pathname={pathname}>
+								Games
 							</NavLink>
 						</nav>
 						<hr className='border-2 border-[var(--line)]' />

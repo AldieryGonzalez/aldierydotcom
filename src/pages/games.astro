@@ -1,0 +1,18 @@
+---
+import GamesRoute from '@/components/games-route';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title='Games - Aldiery'>
+	<section class='page-shell flex flex-col gap-6'>
+		<div class='brutal-panel px-4 py-4'>
+			<p class='text-xs font-bold uppercase tracking-[0.2em]'>Arcade Access</p>
+			<h1 class='mt-2 text-4xl sm:text-6xl'>Games</h1>
+			<p class='mt-3 max-w-3xl border-l-4 border-[var(--line)] pl-3 text-sm font-semibold'>
+				Unlock from the hero easter egg or enter the classic Konami sequence to open this cabinet.
+			</p>
+		</div>
+
+		<GamesRoute client:load />
+	</section>
+</BaseLayout>

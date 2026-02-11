@@ -24,12 +24,11 @@ export function useParentSize(
 				break;
 			}
 		}
+		setSize([parent.clientWidth, parent.clientHeight]);
 		const observer = new ResizeObserver((entries) => {
 			const entry = entries[0];
-			setSize([
-				entry.borderBoxSize[0].inlineSize,
-				entry.borderBoxSize[0].blockSize,
-			]);
+			const { width, height } = entry.contentRect;
+			setSize([width, height]);
 		});
 		observer.observe(parent);
 		return () => observer.disconnect();

@@ -6,7 +6,9 @@ type NavLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 const NavLink = ({ href, className, pathname, ...props }: NavLinkProps) => {
-	const active = pathname === href;
+	const active =
+		pathname === href ||
+		(Boolean(pathname) && href !== '/' && pathname.startsWith(`${href}/`));
 	return (
 		<a
 			href={href}
